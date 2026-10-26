@@ -1,0 +1,26 @@
+# YAGO3-10 (1 GPU).
+# Usage: python train.py --config configs/yago3-10.yaml
+
+data_path: ./data/yago3-10
+devices: 1
+node_ratio: 0.1
+degree_ratio: 1.0
+dependent: true
+grad_ckpt: true
+num_negative: 32
+neg_visited: 64
+adversarial_temperature: 0.5
+batch_size: 8
+test_batch_size: 8
+max_epochs: 20
+limit_train_batches: 5395
+seed: 42
+checkpoint_save_path: ./experiments/yago3-10
+num_layer: 6
+hidden_dim: 32
+num_heads: 8
+drop: 0.0
+global_channel: tokens
+num_tokens: 32
+learning_rate: 0.001
+weight_decay: 0.0001

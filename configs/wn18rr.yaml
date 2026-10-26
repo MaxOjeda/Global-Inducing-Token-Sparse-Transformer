@@ -1,0 +1,23 @@
+# WN18RR (1 GPU)
+# Usage: python train.py --config configs/wn18rr.yaml
+
+data_path: ./data/wn18rr
+devices: 1
+node_ratio: 0.1
+degree_ratio: 1.0
+num_negative: 32
+neg_visited: 64
+adversarial_temperature: 1.0
+batch_size: 8
+test_batch_size: 8
+max_epochs: 20
+seed: 43
+checkpoint_save_path: ./experiments/wn18rr
+num_layer: 6
+hidden_dim: 32
+num_heads: 8
+drop: 0.0
+global_channel: tokens
+num_tokens: 32
+learning_rate: 0.001
+weight_decay: 0.0001

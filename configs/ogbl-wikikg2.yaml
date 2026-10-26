@@ -1,0 +1,33 @@
+# ogbl-wikikg2 (2 GPUs).
+# Usage: python train.py --config configs/ogbl-wikikg2.yaml
+
+data_path: ogbl-wikikg2
+devices: 2
+num_workers: 4
+node_ratio: 0.002
+degree_ratio: 1.0
+test_node_ratio: 0.01
+dependent: true
+rw_distance: true
+grad_ckpt: true
+num_negative: 1048576
+neg_visited: 4096
+adversarial_temperature: 0.5
+grad_clip: 1.0
+no_decay_rel: true
+batch_size: 8
+test_batch_size: 2
+max_epochs: 15
+limit_train_batches: 4000
+limit_val_batches: 625
+eval_subsample: 64000
+seed: 42
+checkpoint_save_path: ./experiments/ogbl-wikikg2
+num_layer: 6
+hidden_dim: 32
+num_heads: 8
+drop: 0.0
+global_channel: tokens
+num_tokens: 32
+learning_rate: 0.001
+weight_decay: 0.0001
